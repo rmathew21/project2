@@ -1,0 +1,33 @@
+CREATE DATABASE IF NOT EXISTS flights_db;
+USE flights_db;
+CREATE TABLE IF NOT EXISTS userInfo(
+id INT NOT NULL AUTO_INCREMENT,
+user_id VARCHAR (100) NOT NULL,
+password VARCHAR (20) not null,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS flights(
+ id INT NOT NULL AUTO_INCREMENT,
+ user_id INT NOT NULL,
+trip_id INT NOT NULL,
+departdate DATE NOT NULL,
+departure DATETIME NOT NULL,
+returndate DATE NOT NULL,
+returntime DATETIME NOT NULL,
+budget_price INT NOT NULL,
+actual_price INT NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS trip( 
+id INT NOT NULL AUTO_INCREMENT,
+user_id INT NOT NULL,
+location VARCHAR (75) NOT NULL,
+budget_price INT NOT NULL,
+actual_price INT NOT NULL,
+PRIMARY KEY(id)
+);
+SELECT * FROM trip;
+SELECT * FROM flights;
+SELECT * FROM userInfo;
