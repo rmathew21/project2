@@ -2,11 +2,11 @@ const express = require("express");
 require('dotenv').config();
 const db = require("./models");
 const app = express();
-// db.sequelize.sync().then(function () {
-//     app.listen(PORT, function () {
-//         console.log('DB Synced listening on ' + PORT);
-//     });
-// });
+db.sequelize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log('DB Synced listening on ' + PORT);
+    });
+});
 const PORT = process.env.PORT || 8080;
 require("./config/connection.js")
 app.use(express.urlencoded({ extended: true }));
