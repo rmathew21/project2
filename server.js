@@ -1,6 +1,9 @@
 const express = require("express");
 const sequelize = require("sequelize");
+
 require('dotenv').config();
+const keys = require("./key.js");
+
 const db = require("./models");
 console.log(db)
 const app = express();
