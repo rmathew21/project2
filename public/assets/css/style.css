@@ -76,6 +76,133 @@ h1 {
 */
 }
 
+/* ---------------------------------------------- FLIGHT CHOICES WRAPPER ----------------------------------- */
+
+
+.flight-choices-wrapper {
+	position: relative;
+	width: 38rem;
+	height:30rem;
+	margin: auto;
+	margin-top: 5rem;
+	padding: 1rem;
+	overflow: scroll;
+	overflow-x: auto;
+	background-color: navy;
+}
+
+.flight-card-grid {
+	display: grid;  
+	width: 100%;
+	height: 100%;
+    /* grid-template-columns: 50% 50%; */
+	margin: auto;
+	
+    /* margin-top: 5rem;
+    margin-bottom: 6rem;
+    height: 30rem; */
+}
+
+.card {
+	width: 95%;
+	height: 6rem;
+	margin: auto;
+	margin-top: .5rem;
+}
+
+.card-body {
+	width: 33rem;
+	padding: 0 !important;
+}
+
+.btn-primary {
+	background-color: yellow;
+	color: navy;
+}
+
+.item2 {
+	/* border: solid red 1px; */
+}
+
+.item-11 {
+
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-12 {
+
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-13 {
+
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-14 {
+
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-15 {
+
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-16 {
+
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flight-choices-wrapper::-webkit-scrollbar {
+    /* height: 8px; */
+    background-color: #F5F5F5;
+}
+ 
+.flight-choices-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+ 
+.flight-choices-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#3f51b5));
+	background-image: -webkit-linear-gradient(bottom, #30cfd0 0%, #3f51b5 100%);
+	background-image: linear-gradient(to top, #30cfd0 0%, #3f51b5 100%); 
+}
+
 
 
 
