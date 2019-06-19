@@ -93,7 +93,7 @@ h1 {
 .flight-choices-wrapper {
 	position: relative;
 	width: 95%;;
-	height:30rem;
+	height:25rem;
 	margin: auto;
 	margin-top: 1rem;
 	padding: 1rem;
@@ -222,7 +222,7 @@ h1 {
 .hotel-choices-wrapper {
 	position: relative;
 	width: 95%;;
-	height:30rem;
+	height:25rem;
 	margin: auto;
 	margin-top: 1rem;
 	padding: 1rem;
@@ -343,6 +343,109 @@ h1 {
 	background-image: -webkit-gradient(linear, left bottom, left top, from(#30cfd0), to(#3f51b5));
 	background-image: -webkit-linear-gradient(bottom, #30cfd0 0%, #3f51b5 100%);
 	background-image: linear-gradient(to top, #30cfd0 0%, #3f51b5 100%); 
+}
+
+.progress {
+	margin-top: 1rem;
+	height: 2rem;
+	margin-top: 3rem;
+}
+
+.total-budget-text {
+	color: white;
+	float: right;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+/* ---------------------------------------------- CURRENT TRIP WRAPPER ----------------------------------- */
+
+
+
+.current-event-grid-wrapper {
+	position: relative;
+	width: 95%;;
+	height:45rem;
+	margin: auto;
+	margin-top: 1rem;
+	padding: 1rem;
+	overflow-x: auto;
+	/* background-color: navy; */
+}
+
+.current-event-grid {
+	display: grid;  
+	width: 100%;
+	height: 100%;
+	background: white;
+	margin: auto;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: 50% 50%;
+	
+    /* margin-top: 5rem;
+    margin-bottom: 6rem;
+    height: 30rem; */
+}
+
+.item4 {
+	border: solid red 1px;
+}
+
+#myChart {
+	width:5rem;
+	height: 5rem;
+}
+
+
+
+.item-31 {
+
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+
+}
+
+.item-32 {
+
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-33 {
+
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-34 {
+
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-35 {
+
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -563,7 +666,7 @@ h1 {
 
 .new-trip-container {
 	width: 40rem;
-	/* height: 80%; */
+	height: 43rem;
 	margin: auto;
 	margin-top: 5rem;
 	padding: 1rem;
