@@ -44,10 +44,12 @@ inquier.prompt({
             console.log(result.body[0].apicode);
             const citycode = result.body[0].ctid;
             const portcode = result.body[0].apicode;
-            unirest.get(`https://apidojo-kayak-v1.p.rapidapi.com/hotels/create-session?&airportcode=${portcode}&rooms=1&citycode=${citycode}&checkin=2020-02-02&checkout=2020-02-03&adults=1`)
+            unirest.get(`https://apidojo-kayak-v1.p.rapidapi.com/hotels/create-session?&airportcode=${portcode}&rooms=1&citycode=${citycode}&checkin=2019-08-12&checkout=2019-08-13&adults=1`)
                 .header("X-RapidAPI-Host", keys.hotelap.id)
                 .header("X-RapidAPI-Key", keys.hotelap.secret)
                 .end(function (result) {
+                    var queryURL = `https://apidojo-kayak-v1.p.rapidapi.com/hotels/create-session?&airportcode=${portcode}&rooms=1&citycode=${citycode}&checkin=2019-08-12&checkout=2019-08-13&adults=1`;
+                    console.log(queryURL);
                     console.log("doublesuccess");
                     console.log(result.body.hotelset);
                 });
