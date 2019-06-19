@@ -1,3 +1,11 @@
+
+module.exports = function (sequelize, dataTypes) {
+    const user = sequelize.define("user", {
+        email: dataTypes.STRING,
+        password: dataTypes.STRING
+    });
+    return user;
+=======
 // requiring bcrypt for password hashing
 const bcrypt = require("bcryptjs");
 
@@ -32,4 +40,5 @@ module.exports = function(sequelize, DataTypes) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
     return User;
+
 };
