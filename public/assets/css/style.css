@@ -118,14 +118,26 @@ h1 {
     height: 30rem; */
 }
 
-.card {
+.flight-card {
 	width: 95%;
 	height: 6rem;
 	margin: auto;
 	margin-top: .5rem;
 }
 
-.card-body {
+.flight-card-body {
+	width: 33rem;
+	padding: 0 !important;
+}
+
+.hotel-card {
+	width: 95%;
+	height: 6rem;
+	margin: auto;
+	margin-top: .5rem;
+}
+
+.hotel-card-body {
 	width: 33rem;
 	padding: 0 !important;
 }
@@ -367,7 +379,6 @@ h1 {
 
 .current-event-grid-wrapper {
 	position: relative;
-	width: 95%;;
 	height:45rem;
 	margin: auto;
 	margin-top: 1rem;
@@ -378,20 +389,20 @@ h1 {
 
 .current-event-grid {
 	display: grid;  
-	width: 100%;
+	width: 90rem;
 	height: 100%;
-	background: white;
+	background: rgba(236, 240, 241, 1);
 	margin: auto;
-	grid-template-columns: 33% 33% 33%;
+	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 50% 50%;
-	
+	/* grid-gap: 1rem; */
     /* margin-top: 5rem;
     margin-bottom: 6rem;
     height: 30rem; */
 }
 
 .item4 {
-	border: solid red 1px;
+	/* border: solid red 1px; */
 }
 
 #myChart {
@@ -404,7 +415,8 @@ h1 {
 .item-31 {
 
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+	grid-row: 1 / span 1;
+	padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,8 +426,10 @@ h1 {
 
 .item-32 {
 
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 1;
+    grid-column: 2 / span 3;
+	grid-row: 1 / span 1;
+	width: 50rem;
+	padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,15 +438,16 @@ h1 {
 
 .item-33 {
 
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
+    grid-column: 1 / span 4  ;
+	grid-row: 2 / span 1;
+	width: 88rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 }
 
-.item-34 {
+/* .item-34 {
 
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
@@ -451,6 +466,16 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+.item-36 {
+
+    grid-column: 4 / span 1;
+    grid-row: 2 / span 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
 
 
 
