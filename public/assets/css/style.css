@@ -4,6 +4,8 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    overflow: scroll;
+=======
 	overflow: scroll;
 	padding-bottom: 3rem;
 }
@@ -77,6 +79,8 @@ h1 {
 */
 }
 
+  
+=======
 .nav-link.active {
     color: wheat !important;
     background-color: navy !important;

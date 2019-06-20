@@ -1,7 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-// need to require models folder
+const db = require("../models");
 
 // Using Passport Local Strategy for email/password
 passport.use(new LocalStrategy(
@@ -26,7 +26,11 @@ passport.use(new LocalStrategy(
             else if (!dbUser.validPassword(password)) {
                 return done(null, false, {
                     message: "Incorrect password."
+
                 })
+
+                });
+
             }
             // If none of the above, return the user
             return done(null, dbUser);
@@ -35,7 +39,7 @@ passport.use(new LocalStrategy(
 ));
 
 // In order to help keep authentication state across HTTP requests,
-// Sequelize needs to seralize the deseralize the user
+
 // Just consder this part boilderplate needed to make it all work
 passport.serializeUser(function(user, cb) {
     cb(null, user);
