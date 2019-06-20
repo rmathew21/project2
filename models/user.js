@@ -29,7 +29,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     // Creating custom method for our User model
-    // This will check if an unhashed password entered by the 
+    // This will check if an unhashed password entered by the
     // user can be compared to the hashed password stored in the db
     User.prototype.validPassword = function(password) {
         return bcrypt.compareSync(password, this.password);
