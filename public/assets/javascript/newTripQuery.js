@@ -28,23 +28,42 @@ $(".submit-btn").on("click", function(event) {
     $(".departing").val("");
     $(".returning").val("");
 
-    $.ajax({
-        url: `https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1=${currentTrip.flyingFrom}
-        &destination1=${currentTrip.flyingTo}&departdate1=${currentTrip.departing}-04&cabin=e&currency=USD&adults=1&bags=0&departdate2=${currentTrip.returning}`,
-        headers: {
-            "x-rapidapi-key": "96573d5d79msh44fd23d95baf58fp13dc4cjsn2eaceee950ed",
-            "x-rapidapi-host": "apidojo-kayak-v1.p.rapidapi.com"
-        },
-        type: "GET",
+    $.ajax("/find-flights", {
 
-    }
-    ).then(function (response) {
+        type: "GET",
+        trip: currentTrip
+
+    }).then(function (response) {
 
         console.log(response);
 
 
     });
 });
+
+
+
+// function createCards() {
+//     flightCard = $("<div>");
+//     flightCard.addClass("")
+// }
+
+
+// $.ajax({
+//     url: `https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1=${currentTrip.flyingFrom}
+//     &destination1=${currentTrip.flyingTo}&departdate1=${currentTrip.departing}-04&cabin=e&currency=USD&adults=1&bags=0&departdate2=${currentTrip.returning}`,
+//     headers: {
+//         "x-rapidapi-key": "96573d5d79msh44fd23d95baf58fp13dc4cjsn2eaceee950ed",
+//         "x-rapidapi-host": "apidojo-kayak-v1.p.rapidapi.com"
+//     },
+//     type: "GET",
+
+// }).then(function (response) {
+
+//     console.log(response);
+
+
+// });
 
 
 
