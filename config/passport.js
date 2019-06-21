@@ -1,53 +1,106 @@
-const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
+const bcrypt = require('bcryptjs');
 
-const db = require("../models");
+module.exports = function(passport, user) {
+    const User = user;
+    const LocalStrategy = require("passport-local").Strategy;
 
-// Using Passport Local Strategy for email/password
-passport.use(new LocalStrategy(
+    // serialize
+    passport.serializeUser(function(user, cb) {
+        cb(null, user);
+    });
+    
+    passport.deserializeUser(function(obj, cb) {
+        cb(null, obj);
+    });
+
+
+    // Using Passport Local Strategy for email/password
+    passport.use('local-signup', new LocalStrategy(
     // sign in using email, not username
     {
-        usernameField: "email"
+        usernameField: "email",
+        passwordField: 'password',
+        passReqToCallback: true // allows us to pass back the entire request to the callback
     },
-    function(email, password, done) {
+    function(req, email, password, done) {
+        const generateHash = function(password) {
+            return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+        };
         // run code when user tries to sign in
-        db.User.findOne({
+        User.findOne({
             where: {
                 email: email
             }
-        }).then(function(dbUser) {
+        }).then(function(user) {
             // If there's no user with the given email
-            if (!dbUser) {
+            if (user) 
+            {
                 return done(null, false, {
-                    message: "Incorrect email."
+                    message: "This email is already taken"
+                });
+            } else 
+            {
+                const userPassword = generateHash(password);
+                const data =
+                {
+                    email: email,
+                    password: userPassword
+                };
+
+                User.create(data).then(function(newUser, created) {
+                    if (!newUser) {
+                        return done(null,false);
+                    }
+                    if (newUser) {
+                        return done(null, newUser);
+                    }
                 });
             }
-            // If user enters correct email, but wrong password
-            else if (!dbUser.validPassword(password)) {
-                return done(null, false, {
-                    message: "Incorrect password."
 
-                })
+        });
 
-                });
+    }
+            
+));
 
+
+// Local Signin
+passport.use('local-signin', new LocalStrategy(
+    {
+        // by default, local strategy uses username, but we're changing to email
+        usernameField: 'email',
+        passwordField: 'password',
+        passReqToCallback: true // allows us to pass back the entire request to the cb
+    },
+    function(req, email, password, done) {
+        let User = user;
+        let isValidPassword = function(userpass, password) {
+            return bcrypt.compareSync(password, userpass);
+        }
+        User.findOne({
+            where: {
+                email: email
             }
-            // If none of the above, return the user
-            return done(null, dbUser);
+        }).then(function(user) {
+            if (!user) {
+                return done(null, false, {
+                    message: 'Email does not exist'
+                });
+            }
+            if (!isValidPassword(user.password, password)) {
+                return done(null, false, {
+                    message: 'Incorrect password.'
+                });
+            }
+            let userinfo = user.get();
+            return done(null, userinfo);
+        }).catch(function(err) {
+            console.log("Error:", err);
+            return done(null, false, {
+                message: 'Something went wrong with your signin'
+            });
         });
     }
 ));
 
-// In order to help keep authentication state across HTTP requests,
-
-// Just consder this part boilderplate needed to make it all work
-passport.serializeUser(function(user, cb) {
-    cb(null, user);
-});
-
-passport.deserializeUser(function(obj, cb) {
-    cb(null, obj);
-});
-
-// Exporting our configured passport
-module.exports = passport;
+}
