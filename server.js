@@ -1,6 +1,5 @@
 const express = require("express");
 const sequelize = require("sequelize");
-var unirest = require('unirest');
 var inquier = require("inquirer");
 require('dotenv').config();
 const keys = require("./key.js");

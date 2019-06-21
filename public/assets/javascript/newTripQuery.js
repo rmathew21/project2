@@ -32,9 +32,7 @@ $(".submit-btn").on("click", function (event) {
     // currentTrip.departing.val("");
     // currentTrip.returning.val("");
 
-    $.ajax("/", { type: "GET" }).then(function (res) {
-        console.log(res);
-    })
+
 });
 
 
