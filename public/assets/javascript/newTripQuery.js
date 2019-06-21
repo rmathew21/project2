@@ -2,49 +2,11 @@
 
 let currentTrip;
 
+
 function Trip() {
-    // this.roundTrip = true;
-
-function Trip(tripDetails) {
     this.roundTrip = true;
-
-    // this.flyingFrom = tripDetails.flyingFrom;
-    // this.flyingTo = tripDetails.flyingTo;
-    // this.departDate = tripDetails.departDate;
-    // this.returnDate = tripDetails.returnDate;
-    // this.numOfAdults - tripDetails.numOfAdults;
-    // this.numOfChidren = tripDetails.numOfChidren;
-    // this.travelClass = tripDetails.travelClass;
-    // this.budget = tripDetails.budget;
-    // this.actual = 0;
 }
 
-// unirest.get("https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?origin1=SGN&destination1=DAD&departdate1=2018-12-20&cabin=e&currency=USD&adults=1&bags=0")
-// .header("X-RapidAPI-Host", "apidojo-kayak-v1.p.rapidapi.com")
-// .header("X-RapidAPI-Key", "96573d5d79msh44fd23d95baf58fp13dc4cjsn2eaceee950ed")
-// .end(function (result) {
-//   console.log(result.status, result.headers, result.body);
-// });
-
-
-
-// KAYAK.embed({
-//     container: document.getElementById("kayakSearchWidgetContainer"),
-//     hostname: "www.kayak.com",
-//     autoPosition: true,
-//     defaultProduct: "hotels",
-//     enabledProducts: ["hotels", "flights"],
-//     startDate: "2018-10-02",
-//     endDate: "2018-10-28",
-//     origin: "New York, NY",
-//     destination: "Boston, MA",
-//     ssl: true,
-//     affiliateId: "acme_corp",
-//     isInternalLoad: false,
-//     lc: "en",
-//     cc: "us",
-//     mc: "EUR"
-//     });
 
 
 
