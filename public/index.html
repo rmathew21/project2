@@ -8,7 +8,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-    </script>
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -57,10 +57,6 @@
 
             <div class="item item-2">
 
-                <div style="height:500px;width: 500px;">
-                    <div id="kayakSearchWidgetContainer"></div>
-                </div>
-
 
                 <div class="booking-form">
                     <form>
@@ -84,14 +80,14 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <span class="form-label">Flying from</span>
-                                    <input class="form-control flying-from autocomplete" id="autocomplete" type="text"
+                                    <input class="form-control flying-from autocomplete" id="flying-from-input" type="text"
                                         placeholder="City or airport">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <span class="form-label">Flying to</span>
-                                    <input class="form-control flying-to" type="text" placeholder="City or airport">
+                                    <input class="form-control flying-to" type="text" id="flying-to-input" placeholder="City or airport">
                                 </div>
                             </div>
                         </div>
@@ -108,136 +104,6 @@
                                     <input class="form-control returning" type="date" required>
                                 </div>
                             </div>
-
-
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
-            modal</button>
-
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-        </button>
-
-
-        <div class="booking-form">
-            <form>
-                <div class="form-group">
-                    <div class="form-checkbox">
-                        <label for="roundtrip">
-                            <input type="radio" id="roundtrip" name="flight-type">
-                            <span></span>Roundtrip
-                        </label>
-                        <label for="one-way">
-                            <input type="radio" id="one-way" name="flight-type">
-                            <span></span>One way
-                        </label>
-                        <label for="multi-city">
-                            <input type="radio" id="multi-city" name="flight-type">
-                            <span></span>Multi-City
-                        </label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <span class="form-label">Flying from</span>
-                            <input class="form-control" type="text" id="flightOrigin" placeholder="City or airport">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <span class="form-label">Flying to</span>
-                            <input class="form-control" type="text" id="flightDestination"
-                                placeholder="City or airport">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <span class="form-label">Departing</span>
-                            <input class="form-control" type="date" id="departDate" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <span class="form-label">Returning</span>
-                            <input class="form-control" type="date" id="returnDate" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <span class="form-label">Adults (18+)</span>
-                            <select class="form-control" id="passengers">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <span class="select-arrow">
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <span class="form-label">Children (0-17)</span>
-                            <select class="form-control" id="children">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                            </select>
-                            <span class="select-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <span class="form-label">Travel class</span>
-                            <select class="form-control" id="flightClass">
-                                <option>Economy class</option>
-                                <option>Business class</option>
-                                <option>First class</option>
-                            </select>
-                            <span class="select-arrow"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-btn">
-                    <button class="submit-btn">Show flights</button>
-                </div>
-            </form>
-        </div>
-
-        
-        
-        
-        
-                </div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">New
-                    Trip</button>
-        
-        
-        
-            </div>
-        
-        
-        
-        
-            <!-- Large modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
-                modal</button>
-        
-            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-        
-                        <div class="modal-header">
-                            <h5 class="modal-title">Vacation Time!!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
@@ -275,7 +141,7 @@
                             </div>
                         </div>
                         <div class="see-flights-btn">
-                            <button class="submit-btn">Show flights</button>
+                            <button class="submit-btn" type="button">Show flights</button>
                         </div>
                     </form>
                 </div>
@@ -288,8 +154,6 @@
 
 
             </div>
-
-    </div>
 
 
 
@@ -307,7 +171,8 @@
 
     <!-- Large modal -->
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
-        modal</button>
+        modal
+    </button>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
@@ -443,66 +308,67 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
 
-                <!-- Large modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal"
-                    data-target=".bd-example-modal-lg">Large
-                    modal</button>
+            </div>
 
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
+        </div>
 
-                            <div class="modal-header">
-                                <h5 class="modal-title">Vacation Time!!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+    </div>
+
+    <!-- Large modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large
+        modal</button>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Vacation Time!!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Select a flight.</p>
+                    <button class="card flight-card">
+                        <div class="card-body flight-card-body">
+
+                            <div class="flight-card-grid">
+                                <div class="item2 item-11">
+                                    <strong>3:30pm - 5:26pm</strong>
+                                </div>
+                                <div class="item2 item-12">
+                                    3h 20m (Nonstop) <br>
+                                    IAX - LAX
+                                </div>
+                                <div class="item2 item-13">
+
+                                    <a href="#" class="btn btn-primary">Select</a>
+                                </div>
+                                <div class="item2 item-14">
+                                    Good Flight (7/10)
+                                </div>
+                                <div class="item2 item-15">
+
+
+                                </div>
+                                <div class="item2 item-16"></div>
                             </div>
-                            <div class="modal-body">
-                                <p>Select a flight.</p>
-                                <button class="card flight-card">
-                                    <div class="card-body flight-card-body">
-
-                                        <div class="flight-card-grid">
-                                            <div class="item2 item-11">
-                                                <strong>3:30pm - 5:26pm</strong>
-                                            </div>
-                                            <div class="item2 item-12">
-                                                3h 20m (Nonstop) <br>
-                                                IAX - LAX
-                                            </div>
-                                            <div class="item2 item-13">
-
-                                                <a href="#" class="btn btn-primary">Select</a>
-                                            </div>
-                                            <div class="item2 item-14">
-                                                Good Flight (7/10)
-                                            </div>
-                                            <div class="item2 item-15">
-
-
-                                            </div>
-                                            <div class="item2 item-16"></div>
-                                        </div>
-
-                                    </div>
-                                </button>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Next</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-
 
                         </div>
-                    </div>
+                    </button>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Next</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
 
-                <div style="height:500px;width: 500px;">
-                    <div id="kayakSearchWidgetContainer"></div>
-                </div>
+
+            </div>
+        </div>
+    </div>
 
 
 
@@ -527,11 +393,19 @@
 
 
 
-                <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
 
-                <script src="./assets/javascript/newTripQuery.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@latest/dist/index.browser.min.js"></script>
+
+
+
+
+    <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
+
+    <script src="./assets/javascript/newTripQuery.js"></script>
 
 </body>
 
