@@ -22,3 +22,9 @@ function objToSql(ob) {
     // translate array of strings to a single comma-separated string
     return arr.toString();
 }
+const orm = {
+    all: function ()
+
+
+
+}

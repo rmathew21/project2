@@ -1,9 +1,27 @@
-function Hotels(hotelObj) {
-    this.id;
-    this.user_id = hotelObj.user_id;
-    this.location = hotelObj.location;
-    this.budget_price = hotelObj.budget_price;
-    this.actual_price = hotelObj.actual_price;
-};
+module.exports = function (sequelize, dataTypes) {
+    var Hotel = sequelize.define(Hotel, {
+        id: {
+            type: dataTypes.id,
+            allowNull: false,
+        },
+        user_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+        },
+        location: {
+            type: dataTypes.STRING,
+            allowNull: false,
 
-module.exports = Hotels;
+        },
+        budget_price: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+        },
+        actual_price: {
+            type: dataTypes.INTEGER,
+            allowNull: false,
+        }
+    }
+    );
+    return Hotel;
+}
