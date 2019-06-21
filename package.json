@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-=======
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "fs": "0.0.1-security",
+    "inquirer": "^6.4.0",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "save": "^2.4.0"
+    "path": "^0.12.7",
+    "save": "^2.4.0",
+    "sequelize": "^5.8.10",
+    "unirest": "^0.6.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -27,16 +34,5 @@
   "bugs": {
     "url": "https://github.com/rmathew21/project2/issues"
   },
-  "homepage": "https://github.com/rmathew21/project2#readme",
-  "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "mysql2": "^1.6.5",
-    "path": "^0.12.7",
-    "sequelize": "^5.8.9",
-    "unirest": "^0.6.0"
-  }
-=======
   "homepage": "https://github.com/rmathew21/project2#readme"
 }
