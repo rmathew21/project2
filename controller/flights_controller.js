@@ -12,5 +12,15 @@ router.get("/", function (req, res) {
         console.log(flightObject);
     })
 })
+router.get("/", function (req, res) {
+    Hotels.all(function (req, res) {
+        Hotels.all(function (data) {
+            const uniqueIds = Hotels.getUniqueIds(data);
+            data = Hotels.groupHotels(uniqueIds, data);
+            const hotelObject = { hotels: data }
+        });
+        console.log(hotelObject);
+    })
+})
 
 module.exports = router;
