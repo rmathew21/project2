@@ -32,6 +32,13 @@ app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true}
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
+// For Handlebars
+app.set('views', './views')
+app.engine('handlebars', exphbs({
+    extname: '.handlebars'
+}));
+app.set('view engine', '.handlebars');
+
 // models
 const models = require('./models');
 
