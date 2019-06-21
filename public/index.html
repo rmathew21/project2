@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -55,6 +56,10 @@
             </div>
 
             <div class="item item-2">
+
+                <div style="height:500px;width: 500px;">
+                    <div id="kayakSearchWidgetContainer"></div>
+                </div>
 
 
                 <div class="booking-form">
@@ -302,13 +307,70 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Next</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
 
-            </div>
-        </div>
-    </div>
+                <!-- Large modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target=".bd-example-modal-lg">Large
+                    modal</button>
+
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                            <div class="modal-header">
+                                <h5 class="modal-title">Vacation Time!!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Select a flight.</p>
+                                <button class="card flight-card">
+                                    <div class="card-body flight-card-body">
+
+                                        <div class="flight-card-grid">
+                                            <div class="item2 item-11">
+                                                <strong>3:30pm - 5:26pm</strong>
+                                            </div>
+                                            <div class="item2 item-12">
+                                                3h 20m (Nonstop) <br>
+                                                IAX - LAX
+                                            </div>
+                                            <div class="item2 item-13">
+
+                                                <a href="#" class="btn btn-primary">Select</a>
+                                            </div>
+                                            <div class="item2 item-14">
+                                                Good Flight (7/10)
+                                            </div>
+                                            <div class="item2 item-15">
+
+
+                                            </div>
+                                            <div class="item2 item-16"></div>
+                                        </div>
+
+                                    </div>
+                                </button>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Next</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height:500px;width: 500px;">
+                    <div id="kayakSearchWidgetContainer"></div>
+                </div>
 
 
 
@@ -333,11 +395,11 @@
 
 
 
+                <script type="text/JavaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
-
-    <script src="./assets/javascript/newTripQuery.js"></script>
+                <script src="./assets/javascript/newTripQuery.js"></script>
 
 </body>
 
