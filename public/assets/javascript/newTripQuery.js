@@ -4,6 +4,10 @@ let currentTrip;
 
 function Trip() {
     // this.roundTrip = true;
+
+function Trip(tripDetails) {
+    this.roundTrip = true;
+
     // this.flyingFrom = tripDetails.flyingFrom;
     // this.flyingTo = tripDetails.flyingTo;
     // this.departDate = tripDetails.departDate;
@@ -45,7 +49,8 @@ function Trip() {
 
 
 
-$(".see-flights-btn").on("click", function (event) {
+
+$(".submit-btn").on("click", function (event) {
     event.preventDefault();
     currentTrip = new Trip()
     currentTrip.flyingFrom = $(".flying-from").val();

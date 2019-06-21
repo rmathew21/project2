@@ -1,6 +1,5 @@
 const bcrypt = require("bcryptjs");    
     
-
 // requiring bcrypt for password hashing
 
 module.exports = function(sequelize, DataTypes) {
@@ -42,3 +41,4 @@ module.exports = function(sequelize, DataTypes) {
     })
     return User;
 }
+
