@@ -6,4 +6,4 @@ function Hotels(hotelObj) {
     this.actual_price = hotelObj.actual_price;
 };
 
-module.exports = Hotel;
+module.exports = Hotels;
