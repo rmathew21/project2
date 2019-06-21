@@ -3,7 +3,7 @@
 let currentTrip;
 
 function Trip(tripDetails) {
-    // this.roundTrip = true;
+    this.roundTrip = true;
     // this.flyingFrom = tripDetails.flyingFrom;
     // this.flyingTo = tripDetails.flyingTo;
     // this.departDate = tripDetails.departDate;
