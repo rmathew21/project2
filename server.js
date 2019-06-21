@@ -7,7 +7,7 @@ const keys = require("./key.js");
 const app = express();
 const passport = require("passport");
 const session = require("express-session");
-const exphbs = require("express-handlebars");
+
 // db.sequelize.sync().then(function () {
 //   app.listen(PORT, function () {
 //         console.log('DB Synced listening on ' + PORT);
@@ -24,8 +24,7 @@ app.set("view engine", "handlebars");
 const routes = require("./controller/flights_controller.js");
 app.use(routes);
 require("./routes/html-routes.js")(app);
-app.listen(PORT, function () {
-    console.log("App listening on port" + PORT);
+
 
 // For Passport
 app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true})); // session secret
@@ -33,11 +32,11 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 // For Handlebars
-app.set('views', './views')
-app.engine('handlebars', exphbs({
-    extname: '.handlebars'
-}));
-app.set('view engine', '.handlebars');
+// app.set('views', './views')
+// app.engine('handlebars', exphbs({
+//     extname: '.handlebars'
+// }));
+// app.set('view engine', '.handlebars');
 
 // models
 const models = require('./models');
@@ -46,4 +45,8 @@ const models = require('./models');
 const authRoute = require('./routes/auth')(app, passport);
 
 // load passport strategies
-require('./config/passport/passport')(passport, models.user);
+require('./config/passport')(passport, models.user);
+
+app.listen(PORT, function () {
+    console.log("App listening on port" + PORT);
+});
