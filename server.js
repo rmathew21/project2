@@ -7,7 +7,7 @@ const keys = require("./key.js");
 const app = express();
 const passport = require("passport");
 const session = require("express-session");
-const exphbs = require("express-handlebars");
+
 // db.sequelize.sync().then(function () {
 //   app.listen(PORT, function () {
 //         console.log('DB Synced listening on ' + PORT);
@@ -33,11 +33,11 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 // For Handlebars
-app.set('views', './views')
-app.engine('handlebars', exphbs({
-    extname: '.handlebars'
-}));
-app.set('view engine', '.handlebars');
+// app.set('views', './views')
+// app.engine('handlebars', exphbs({
+//     extname: '.handlebars'
+// }));
+// app.set('view engine', '.handlebars');
 
 // models
 const models = require('./models');
