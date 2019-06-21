@@ -24,8 +24,7 @@ app.set("view engine", "handlebars");
 const routes = require("./controller/flights_controller.js");
 app.use(routes);
 require("./routes/html-routes.js")(app);
-app.listen(PORT, function () {
-    console.log("App listening on port" + PORT);
+
 
 // For Passport
 app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true})); // session secret
@@ -46,4 +45,8 @@ const models = require('./models');
 const authRoute = require('./routes/auth')(app, passport);
 
 // load passport strategies
-require('./config/passport/passport')(passport, models.user);
+require('./config/passport')(passport, models.user);
+
+app.listen(PORT, function () {
+    console.log("App listening on port" + PORT);
+});
