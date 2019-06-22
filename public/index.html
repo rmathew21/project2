@@ -200,7 +200,7 @@
 
                         <p>Select your flight.</p>
 
-                        <button class="card flight-card">
+                        <button class="card flight-card" data-price="245">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -228,7 +228,7 @@
                             </div>
                         </button>
 
-                        <button class="card flight-card">
+                        <button class="card flight-card" data-price="267">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -258,7 +258,7 @@
 
 
 
-                        <button class="card flight-card">
+                        <button class="card flight-card" data-price="185">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -286,7 +286,7 @@
                             </div>
                         </button>
 
-                        <button class="card flight-card">
+                        <button class="card flight-card" data-price="345">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -317,13 +317,13 @@
 
                     <!-- ----------------------NEXT STEP----------------------------- -->
 
-                    
+
 
                     <section class="flight-card-wrapper row hide state2" data-step="2" data-title="hotels">
 
-                            <p>Select your hotel.</p>
+                        <p>Select your hotel.</p>
 
-                        <button class="card flight-card">
+                        <button class="card hotel-card" data-price="100">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -351,7 +351,7 @@
                             </div>
                         </button>
 
-                        <button class="card flight-card">
+                        <button class="card hotel-card" data-price="89">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -381,7 +381,7 @@
 
 
 
-                        <button class="card flight-card">
+                        <button class="card hotel-card" data-price="189">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -409,7 +409,7 @@
                             </div>
                         </button>
 
-                        <button class="card flight-card">
+                        <button class="card hotel-card" data-price="215">
                             <div class="card-body flight-card-body">
 
                                 <div class="flight-card-grid">
@@ -440,11 +440,11 @@
 
                     <!-- ----------------------NEXT STEP----------------------------- -->
 
-                    
+
 
                     <section class="flight-card-wrapper row hide state3" data-step="3" data-title="other">
 
-                            <p>Input other expenses.</p>
+                        <p>Input other expenses.</p>
 
                     </section>
 
@@ -453,9 +453,13 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Next</button>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                    <!-- <button type="button" class="btn btn-primary">Next</button>
                     <button type="button" class="btn btn-secondary js-btn-step" data-dismiss="modal"
-                        data-orientation="previous">Close</button>
+                        data-orientation="previous">Close</button> -->
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 
-
+// -------------------- A COUPLE OF ATTEMPTS AT JQUERY'S STEPS LIBRARY WENT WITH TOGGLING DIVS INSTEAD--------------
 
 // $('.flight-modal').steps({
 // btnCancelHtml: 'Cancel',
@@ -18,6 +18,11 @@
 // });
 
 let currentTrip;
+let currentFlightPrice;
+let currentHotelPrice;
+let currentTripBudget = 5000;
+let currentTotalTripPrice = 0;
+let budgetRemaining;
 
 
 function Trip() {
@@ -58,16 +63,46 @@ $(".submit-btn").on("click", function(event) {
     });
 });
 
-function toggleModalDivs(id) {
-    states = [0, 1, 2];
-    states.foreach(state, id) {
-        if (id === state) {
-            $(".state" + (state + 1)).show();
-        } else {
-            $(".state" + state).hide()
-        };
-    }
-}
+
+
+
+$(".flight-card").on("click", function(event) {
+    event.preventDefault();
+    price = this.data("price");
+    console.log(price);
+    currentFlightPrice = parseInt(price);
+    currentTotalTripPrice += currentFlightPrice
+});
+
+
+
+$(".hotel-card").on("click", function(event) {
+    event.preventDefault();
+    price = this.data("price");
+    console.log(price);
+    currentHotelPrice = parseInt(price);
+    currentTotalTripPrice += currentHotelPrice
+});
+
+
+
+
+
+
+
+
+
+
+// function toggleModalDivs(id) {
+//     states = [0, 1, 2];
+//     states.foreach(state, id) {
+//         if (id === state) {
+//             $(".state" + (state + 1)).show();
+//         } else {
+//             $(".state" + state).hide()
+//         };
+//     }
+// }
 
 
 
