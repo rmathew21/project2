@@ -5,19 +5,28 @@ module.exports = function(passport, user) {
     const LocalStrategy = require("passport-local").Strategy;
 
     // serialize
-    passport.serializeUser(function(user, done) {
-        done(null, user.id);
-    });
+    // passport.serializeUser(function(user, done) {
+    //     done(null, user.id);
+    // });
     
-    passport.deserializeUser(function(id, done) {
-        //cb(null, obj);
-        User.findById(id).then(function(user) {
-            if (user) {
-                done(null, user.get());
-            } else {
-                done(user.errors, null);
-            }
-        });
+    // passport.deserializeUser(function(id, done) {
+    //     //cb(null, obj);
+    //     User.findById(id).then(function(user) {
+    //         if (user) {
+    //             done(null, user.get());
+    //         } else {
+    //             done(user.errors, null);
+    //         }
+    //     });
+    // });
+
+    // Boilerplate Sequelize
+    passport.serializeUser(function(user, cb) {
+        cb(null, user);
+    });
+
+    passport.deserializeUser(function(obj, cb) {
+        cb(null, obj);
     });
 
 

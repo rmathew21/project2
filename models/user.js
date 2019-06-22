@@ -1,18 +1,14 @@
-// const bcrypt = require("bcryptjs");    
-    
-// requiring bcrypt for password hashing
-
-module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, Sequelize) {
     // creating our User model
-    const User = sequelize.define("User", {
+    const User = sequelize.define("user", {
         id: {
             autoIncrement: true,
             primaryKey: true,
-            type: sequelize.INTEGER
+            type: Sequelize.INTEGER
         },
         // email can't be null // must be in proper email format
         email: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false,
             unique: true,
             validate: {
@@ -21,11 +17,11 @@ module.exports = function(sequelize, DataTypes) {
         },
         // password can't be null
         password: {
-            type: DataTypes.STRING,
+            type: Sequelize.STRING,
             allowNull: false
         }, 
         status: {
-            type: sequelize.ENUM('active', 'inactive'), defaultValue: 'active'
+            type: Sequelize.ENUM('active', 'inactive'), defaultValue: 'active'
         }
 
     });
