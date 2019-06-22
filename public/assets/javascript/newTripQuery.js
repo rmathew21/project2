@@ -68,20 +68,30 @@ $(".submit-btn").on("click", function(event) {
 
 $(".flight-card").on("click", function(event) {
     event.preventDefault();
-    price = this.data("price");
+    price = $(this).data("price");
     console.log(price);
     currentFlightPrice = parseInt(price);
-    currentTotalTripPrice += currentFlightPrice
+    currentTotalTripPrice += currentFlightPrice;
+    let percentSpent = (currentTotalTripPrice / currentTripBudget) * 100;
+    percentSpent += "%";
+   
+    console.log(percentSpent);
+    $("progress-bar").css("width", percentSpent + "%");
+    $(".state1").toggle();
+    $(".state2").toggle();
+
 });
 
 
 
 $(".hotel-card").on("click", function(event) {
     event.preventDefault();
-    price = this.data("price");
+    price = $(this).data("price");
     console.log(price);
     currentHotelPrice = parseInt(price);
-    currentTotalTripPrice += currentHotelPrice
+    currentTotalTripPrice += currentHotelPrice;
+    $(".state2").toggle();
+    $(".state3").toggle();
 });
 
 
