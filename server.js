@@ -6,6 +6,7 @@ const keys = require("./key.js");
 const app = express();
 const passport = require("passport");
 const session = require("express-session");
+const exphbs = require("express-handlebars");
 
 // db.sequelize.sync().then(function () {
 //   app.listen(PORT, function () {
@@ -24,38 +25,17 @@ app.use(routes);
 require("./routes/html-routes.js")(app);
 
 
-    // For Passport
-    app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
-    app.use(passport.initialize());
-    app.use(passport.session()); // persistent login sessions
-
-<<<<<<< HEAD
-    // models
-    const models = require('./models');
-=======
-// For Handlebars
-// app.set('views', './views')
-// app.engine('handlebars', exphbs({
-//     extname: '.handlebars'
-// }));
-// app.set('view engine', '.handlebars');
+// For Passport
+app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
 // models
 const models = require('./models');
->>>>>>> 40e935526fc0f8315a4178c0c7bd84158dc2f337
 
-    // routes
-    const authRoute = require('./routes/auth')(app, passport);
+// routes
+const authRoute = require('./routes/auth')(app, passport);
 
-<<<<<<< HEAD
-    // load passport strategies
-    require('./config/passport/passport')(passport, models.user);
-});
-=======
 // load passport strategies
-require('./config/passport')(passport, models.user);
+require('./config/passport/passport')(passport, models.user);
 
-app.listen(PORT, function () {
-    console.log("App listening on port" + PORT);
-});
->>>>>>> 40e935526fc0f8315a4178c0c7bd84158dc2f337

@@ -31,7 +31,9 @@ module.exports = function (app) {
             returntime: req.body.returntime,
             budget_price: req.body.budget_price,
             actual_price: req.body.actual_price,
-        });
+        }).then(function (result) {
+            res.end();
+        })
     });
     app.post("/api/newHotel", function (req, res) {
         Hotel.create({
@@ -40,16 +42,21 @@ module.exports = function (app) {
             location: req.body.location,
             budget_price: req.body.budget_price,
             actual_price: req.body.actual_price
+        }).then(function (result) {
+            res.end();
         });
-    });
 
-    app.post("api/newUser", function (req, res) {
-        User.create({
-            id: req.body.id,
-            email: req.body.email,
-            password: req.body.password,
-            status: req.body.status,
-        });
-    });
-    //api calls sending the new objects to the database?
-}
+        app.post("api/newUser", function (req, res) {
+            User.create({
+                id: req.body.id,
+                email: req.body.email,
+                password: req.body.password,
+                status: req.body.status,
+            }).then(function (result) {
+                res.end();
+
+            })
+        })
+        //api calls sending the new objects to the database?
+    })
+};

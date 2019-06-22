@@ -1,50 +1,51 @@
-module.exports = function (sequelize, dataTypes) {
-    var Flights = sequelize.define(Flights, {
-        id: {
-            type: dataTypes.id,
-            allowNull: false,
-        },
-        user_id: {
-            type: dataTypes.id,
-            allowNull: false,
+var Sequelize = require("sequelize");
+var sequelize = require("../config/connection.js");
+var Flights = sequelize.define("Flights", {
+    id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
+    user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
 
-        },
-        trip_id: {
-            type: dataTypes.id,
-            allowNull: false,
+    },
+    trip_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
 
-        },
-        departdate: {
-            type: dataTypes.DATE,
-            allowNull: false,
+    },
+    departdate: {
+        type: Sequelize.STRING,
+        allowNull: false,
 
-        },
-        departure: {
-            type: dataTypes.STRING,
-            allowNull: false,
+    },
+    departure: {
+        type: Sequelize.STRING,
+        allowNull: false,
 
-        },
-        returndate: {
-            type: dataTypes.DATE,
-            allowNull: false,
+    },
+    returndate: {
+        type: Sequelize.STRING,
+        allowNull: false,
 
-        },
-        returntime: {
-            type: dataTypes.STRING,
-            allowNull: false,
+    },
+    returntime: {
+        type: Sequelize.STRING,
+        allowNull: false,
 
-        },
-        budget_price: {
-            type: dataTypes.INTEGER,
-            allowNull: false,
+    },
+    budget_price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
 
-        },
-        actual_price: {
-            type: dataTypes.INTEGER,
-            allowNull: false,
+    },
+    actual_price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
 
-        },
-    }
-    );
-    return Flights;
+    },
 }
+);
+Flights.sync();
+module.exports = Flights;

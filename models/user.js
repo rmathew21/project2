@@ -1,8 +1,8 @@
-const bcrypt = require("bcryptjs");    
-    
+const bcrypt = require("bcryptjs");
+
 // requiring bcrypt for password hashing
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     // creating our User model
     const User = sequelize.define("User", {
         id: {
@@ -27,11 +27,11 @@ module.exports = function(sequelize, DataTypes) {
 
     });
 
-    
-// Creating custom method for our User model
+
+    // Creating custom method for our User model
 
     // user can be compared to the hashed password stored in the db
-    User.prototype.validPassword = function(password) {
+    User.prototype.validPassword = function (password) {
         return bcrypt.compareSync(password, this.password);
     };
 
