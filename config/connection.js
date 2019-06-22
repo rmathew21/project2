@@ -10,7 +10,6 @@ const connection = mysql2.createConnection({
 
 connection.connect(function (err) {
     if (err) {
-        console.err("error connecting" + err.stack);
         return;
     }
     console.log("connected as " + connection.threadId);
