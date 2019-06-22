@@ -1,6 +1,3 @@
-
-// -------------------- A COUPLE OF ATTEMPTS AT JQUERY'S STEPS LIBRARY WENT WITH TOGGLING DIVS INSTEAD--------------
-
 // $('.flight-modal').steps({
 // btnCancelHtml: 'Cancel',
 // btnPreviousHtml: 'previous',
@@ -50,7 +47,7 @@ AirportInput("flying-from-input");
 
 
 
-$(".submit-btn").on("click", function(event) {
+$(".submit-btn").on("click", function (event) {
     event.preventDefault();
     currentTrip = new Trip()
     currentTrip.flyingFrom = $(".flying-from").val().substring(0, 3);
@@ -66,28 +63,28 @@ $(".submit-btn").on("click", function(event) {
 
 });
 
-    $(".flying-from").val("");
-    $(".flying-to").val("");
-    $(".departing").val("");
-    $(".returning").val("");
+$(".flying-from").val("");
+$(".flying-to").val("");
+$(".departing").val("");
+$(".returning").val("");
 
-    $.ajax("/find-flights", {
+$.ajax("/find-flights", {
 
-        type: "GET",
-        trip: currentTrip
+    type: "GET",
+    trip: currentTrip
 
-    }).then(function (response) {
+}).then(function (response) {
 
-        console.log(response);
+    console.log(response);
 
 
-    });
+});
 });
 
 
 
 
-$(".flight-card").on("click", function(event) {
+$(".flight-card").on("click", function (event) {
     event.preventDefault();
     price = $(this).data("price");
     console.log(price);
@@ -95,7 +92,7 @@ $(".flight-card").on("click", function(event) {
     currentTotalTripPrice += currentFlightPrice;
     let percentSpent = (currentTotalTripPrice / currentTripBudget) * 100;
     percentSpent += "%";
-   
+
     console.log(percentSpent);
     $("progress-bar").css("width", percentSpent + "%");
     $(".state1").toggle();
@@ -106,7 +103,7 @@ $(".flight-card").on("click", function(event) {
 
 
 
-$(".hotel-card").on("click", function(event) {
+$(".hotel-card").on("click", function (event) {
     event.preventDefault();
     price = $(this).data("price");
     console.log(price);
@@ -281,8 +278,6 @@ function onKeyDown(e) {
 
 
 // });
-
-
 
 
 
