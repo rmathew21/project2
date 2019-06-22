@@ -1,5 +1,22 @@
 
 
+
+// $('.flight-modal').steps({
+// btnCancelHtml: 'Cancel',
+// btnPreviousHtml: 'previous',
+// btnNextHtml: 'next',
+// btnLastStepHtml: 'Complete',
+// disableNextButton: false,
+
+// });
+
+// $(".flight-modal").steps({
+//     headerTag: "p",
+//     bodyTag: "section",
+//     transitionEffect: "slideLeft",
+//     autoFocus: true
+// });
+
 let currentTrip;
 
 
@@ -40,6 +57,17 @@ $(".submit-btn").on("click", function(event) {
 
     });
 });
+
+function toggleModalDivs(id) {
+    states = [0, 1, 2];
+    states.foreach(state, id) {
+        if (id === state) {
+            $(".state" + (state + 1)).show();
+        } else {
+            $(".state" + state).hide()
+        };
+    }
+}
 
 
 

@@ -1,4 +1,20 @@
 
+/* .state1 {
+	display: 
+
+} */
+
+.state2 {
+	display: none;
+}
+
+.state3 {
+	display: none;
+}
+
+
+
+
 .fade-block {
     background-color: black;
     height: 100vh;
@@ -126,7 +142,7 @@ h1 {
 }
 
 .flight-card-body {
-	width: 33rem;
+	width: 46rem;
 	padding: 0 !important;
 }
 
@@ -138,7 +154,7 @@ h1 {
 }
 
 .hotel-card-body {
-	width: 33rem;
+	width: 46rem;
 	padding: 0 !important;
 }
 
@@ -701,3 +717,7 @@ h1 {
 	padding: 1rem;
 	background: rgba(0, 0, 0, 0.4);
 }
+
+
+
+
