@@ -1,7 +1,7 @@
 
 
-$(".submit-btn").on("click", function (event) {
-    event.preventDefault();
+// $(".submit-btn").on("click", function (event) {
+//     event.preventDefault();
 
     unirest.get(`https://apidojo-kayak-v1.p.rapidapi.com/locations/search?where=${city}`) //THIS FINDS THE CITY CODE
         .header("X-RapidAPI-Host", keys.hotelap.id)

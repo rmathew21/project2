@@ -30,6 +30,18 @@ app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
+
+// For Handlebars
+// app.set('views', './views')
+// app.engine('handlebars', exphbs({
+//     extname: '.handlebars'
+// }));
+// app.set('view engine', '.handlebars');
+
+// app.get('/', function(req, res) {
+//     res.send('Welcome to Passport with Sequelize');
+// })
+
 // models
 const models = require('./models');
 
@@ -39,3 +51,14 @@ const authRoute = require('./routes/auth')(app, passport);
 // load passport strategies
 require('./config/passport/passport')(passport, models.user);
 
+
+// sync database
+models.sequelize.sync().then(function(){
+    console.log("It works")
+}).catch(function(err){
+    console.log(err, "something wen't wrong with DB update")
+});
+
+app.listen(PORT, function () {
+    console.log("App listening on port" + PORT);
+});
