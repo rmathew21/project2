@@ -1,18 +1,20 @@
-// $('.flight-modal').steps({
-// btnCancelHtml: 'Cancel',
-// btnPreviousHtml: 'previous',
-// btnNextHtml: 'next',
-// btnLastStepHtml: 'Complete',
-// disableNextButton: false,
+// -------------------- A COUPLE OF ATTEMPTS AT JQUERY'S STEPS LIBRARY WENT WITH TOGGLING DIVS INSTEAD--------------
 
-// });
+$('.flight-modal').steps({
+    btnCancelHtml: 'Cancel',
+    btnPreviousHtml: 'previous',
+    btnNextHtml: 'next',
+    btnLastStepHtml: 'Complete',
+    disableNextButton: false,
 
-// $(".flight-modal").steps({
-//     headerTag: "p",
-//     bodyTag: "section",
-//     transitionEffect: "slideLeft",
-//     autoFocus: true
-// });
+});
+
+$(".flight-modal").steps({
+    headerTag: "p",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    autoFocus: true
+});
 
 let currentTrip;
 let currentFlightPrice;
@@ -79,7 +81,7 @@ $.ajax("/find-flights", {
 
 
 });
-});
+
 
 
 
@@ -278,6 +280,3 @@ function onKeyDown(e) {
 
 
 // });
-
-
-
