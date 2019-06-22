@@ -1,12 +1,51 @@
-function Flight(flightObj) {
-    this.id;
-    this.user_id = flightObj.user_id;
-    this.trip_id = flightObj.trip_id;
-    this.departdate = flightObj.departdate;
-    this.departure = flightObj.departure;
-    this.returndate = flightObj.returndate;
-    this.returntime = flightObj.returntime;
-    this.budget_price = flightObj.budget_price;
-    this.actual_price = flightObj.actual_price;
-};
-module.exports = Flight;
+var Sequelize = require("sequelize");
+var sequelize = require("../config/connection.js");
+var Flights = sequelize.define("Flights", {
+    id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
+    user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+
+    },
+    trip_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+
+    },
+    departdate: {
+        type: Sequelize.STRING,
+        allowNull: false,
+
+    },
+    departure: {
+        type: Sequelize.STRING,
+        allowNull: false,
+
+    },
+    returndate: {
+        type: Sequelize.STRING,
+        allowNull: false,
+
+    },
+    returntime: {
+        type: Sequelize.STRING,
+        allowNull: false,
+
+    },
+    budget_price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+
+    },
+    actual_price: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+
+    },
+}
+);
+Flights.sync();
+module.exports = Flights;

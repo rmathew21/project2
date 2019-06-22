@@ -1,3 +1,9 @@
+const bcrypt = require("bcryptjs");
+
+// requiring bcrypt for password hashing
+
+// module.exports = function (sequelize, DataTypes) {   this was a merge conflict is it good?
+
 module.exports = function(sequelize, Sequelize) {
     // creating our User model
     const User = sequelize.define("user", {
@@ -26,8 +32,14 @@ module.exports = function(sequelize, Sequelize) {
 
     });
 
-    
-// Creating custom method for our User model
+
+    // Creating custom method for our User model
+
+
+    // user can be compared to the hashed password stored in the db
+    User.prototype.validPassword = function (password) {
+        return bcrypt.compareSync(password, this.password);
+    };
 
     // // user can be compared to the hashed password stored in the db
     // User.prototype.validPassword = function(password) {
