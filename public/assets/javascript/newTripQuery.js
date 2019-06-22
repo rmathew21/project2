@@ -80,6 +80,7 @@ $(".flight-card").on("click", function(event) {
     $(".state1").toggle();
     $(".state2").toggle();
     $(".spent-text").text(currentTotalTripPrice);
+    // showFlightToast();
 
 });
 
@@ -94,8 +95,21 @@ $(".hotel-card").on("click", function(event) {
     $(".state2").toggle();
     $(".state3").toggle();
     $(".spent-text").text(currentTotalTripPrice);
+    // showHotelToast();
 });
 
+// function showFlightToast(){
+//     $("#flight-toast").toast('show');
+// };
+
+// function showHotelToast(){
+//     $("#hotel-toast").toast('show');
+// };
+
+
+// $("#other-expenses-btn").on("click", function(event) {
+// if ($("#other"))
+// });
 
 
 

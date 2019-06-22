@@ -138,6 +138,10 @@ h1 {
 	/* background-color: navy; */
 }
 
+form {
+	margin-left: 1rem;
+}
+
 .flight-card-grid {
 	display: grid;  
 	width: 100%;
