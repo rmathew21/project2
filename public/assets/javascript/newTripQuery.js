@@ -20,7 +20,7 @@
 let currentTrip;
 let currentFlightPrice;
 let currentHotelPrice;
-let currentTripBudget = 5000;
+let currentTripBudget = 1000;
 let currentTotalTripPrice = 0;
 let budgetRemaining;
 
@@ -79,6 +79,7 @@ $(".flight-card").on("click", function(event) {
     $("progress-bar").css("width", percentSpent + "%");
     $(".state1").toggle();
     $(".state2").toggle();
+    $(".spent-text").text(currentTotalTripPrice);
 
 });
 
@@ -92,6 +93,7 @@ $(".hotel-card").on("click", function(event) {
     currentTotalTripPrice += currentHotelPrice;
     $(".state2").toggle();
     $(".state3").toggle();
+    $(".spent-text").text(currentTotalTripPrice);
 });
 
 

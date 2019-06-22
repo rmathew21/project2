@@ -109,6 +109,22 @@ h1 {
 
 /* ---------------------------------------------- FLIGHT CHOICES WRAPPER ----------------------------------- */
 
+.budget-display {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 35rem;
+}
+
+.selection-text {
+	margin-left: 3rem;
+	font-weight: bold;
+}
+
+.spent-text {
+	margin-right: 2.5rem;
+}
+
 
 .flight-choices-wrapper {
 	position: relative;
@@ -142,6 +158,10 @@ h1 {
 }
 
 .flight-card:hover {
+	border: solid navy 3px;
+}
+
+.hotel-card:hover {
 	border: solid navy 3px;
 }
 
